@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Козій Р.М.</title>
+    <style>
+         body{
+            background-image: url(https://img.freepik.com/free-vector/room-interior-workplace-with-computer-on-desk-seat-and-shelves_107791-3163.jpg?t=st=1651873007~exp=1651873607~hmac=3838726b47e58c48bf9520704463d1e54a2a22d2bdc38a89e0e91050c4d1d9ef&w=1800);
+         }
+
+        .flex1>div ,.flex2>div{
+            border:1px solid black;
+            width: 20%;
+            margin-left: 4%;
+            margin-right: 4%;
+            height:30px;
+        }
+        .flex1{
+            display:flex;
+            border:2px solid navy;
+            padding-top:30px;
+            padding-bottom: 30px;
+            margin-bottom:30px;
+        }
+        .flex2{
+            display:flex;
+            flex-direction: row-reverse;
+            border:2px solid navy;
+            padding-top:30px;
+            padding-bottom: 30px;
+            margin-bottom:30px;
+        }
+        .marginsDiv {
+            margin: 2rem 0;
+            background: plum;
+        }
+
+        .marginsP {
+            margin: .4rem 0 1.2rem 0;
+            background: bisque;
+        }
+        .rating {
+            float:left;
+        }
+
+        .rating:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+            clip:rect(0,0,0,0);
+        }
+
+        .rating:not(:checked) > label {
+            float:right;
+            width:1em;
+            padding:0 .1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:200%;
+            line-height:1.2;
+            color:#ddd;и
+            text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+        .rating > input:checked ~ label {
+            color: #f70;
+            text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating:not(:checked) > label:hover,
+        .rating:not(:checked) > label:hover ~ label {
+            color: gold;
+            text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating > input:checked + label:hover,
+        .rating > input:checked + label:hover ~ label,
+        .rating > input:checked ~ label:hover,
+        .rating > input:checked ~ label:hover ~ label,
+        .rating > label:hover ~ input:checked ~ label {
+            color: #ea0;
+            text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+        }
+        .rating > label:active {
+            position:relative;
+            top:2px;
+            left:2px;
+        }
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .thirdTask{
+            display:flex;
+        }
+        .thirdTask>div{
+            margin-right: 30px;
+        }
+        input[type="text"] {
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            border-radius: 3px; 
+            background: #ffffff !important;
+            outline: none; 
+            height: 24px; 
+            width: 120px;
+            color: #cccccc; 
+            font-size: 11px;
+            font-family: Tahoma; 
+}
+    </style>
+</head>
+<body>
+    <h1>Козій Роман</h1>
+    <h2>1.</h2>
+    <div class='firstTask'>
+        <div class='flex1'>
+            <div class='div1'>Блок1</div>
+            <div class='div2'>Блок2</div>
+            <div class='div3'>Блок3</div>
+            <div class='div4'>Блок4</div>
+        </div>
+        <div class='flex2'>
+            <div class='div1'>БЛок1</div>
+            <div class='div2'>Блок2</div>
+            <div class='div3'>БЛок3</div>
+            <div class='div4'>Блок4</div>
+        </div>
+    </div>
+    <h2>2.</h2>
+    <div class='secondTask'>
+        <p class='marginsP'>The bottom margin of this paragraph is collapsed …</p>
+        <p class='marginsP'>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+
+        <div class='marginsDiv'>This parent element contains two paragraphs!
+            <p class='marginsP'>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
+            <p class='marginsP'>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+        </div>
+
+        <p class='marginsP'>I am <code>2rem</code> below the element above.</p>
+    </div>
+    <h2>3.</h2>
+    <div class='thirdTask'>
+        <div class='RadioRate'>
+            <h2>Radio Star Rating</h2>
+            <fieldset class="rating">
+                <legend>оцініть:</legend>
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+            </fieldset>
+        </div>
+        <div class='customCB'>
+            <h2>Custom CheckBox</h2>
+            <label class="container">Перший
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Другий
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Третій
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Четвертий
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        <div class='customSelect'>
+            <h2>Кастомний текст</h2>
+            <input type='text'>
+            
+        </div>
+    </div>
+</body>
+</html>
